@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Report Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Project Report Tracker</h1>
+    <p class="subtitle">Google Sheet ka data fetch karke report table me dikhata hai.</p>
+
+    <section class="card">
+      <h2>Google Sheet Source</h2>
+      <form id="sheetForm">
+        <label>
+          Google Sheet URL
+          <input id="sheetUrl" type="url" required value="https://docs.google.com/spreadsheets/d/1B934QqGebQDodGL4tv0GzQrknFEt133ylCrwW0OL-7k/edit?gid=1323463894#gid=1323463894" />
+        </label>
+        <label>
+          GID (sheet tab id)
+          <input id="sheetGid" type="text" value="1323463894" required />
+        </label>
+        <button type="submit">Load Sheet Data</button>
+      </form>
+      <p id="statusText" class="status-text"></p>
+    </section>
+
+    <section class="card">
+      <h2>Sheet Data Preview</h2>
+      <div class="table-wrap">
+        <table id="dataTable"></table>
+      </div>
+      <p id="emptyState">No data loaded yet.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
